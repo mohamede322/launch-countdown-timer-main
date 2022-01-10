@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+// Primary
+$Grayish-blue: hsl(237, 18%, 59%);
+$Soft-red: hsl(345, 95%, 68%);
+$background-color: #231c2b;
+
+// Secondary
+$White: hsl(0, 0%, 100%);
+$Dark-desaturated-blue: hsl(236, 21%, 26%);
+$Very-dark-blue: hsl(235, 16%, 14%);
+$Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  background-color: $background-color;
+}
+
+.container {
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  padding: 0 10px 0 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+  overflow: hidden;
+  h1 {
+    letter-spacing: 5px;
+    color: $White;
+    padding-top: 200px;
+  }
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .time-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      .num {
+        background-color: $Dark-desaturated-blue;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75px;
+        color: $Soft-red;
+        border-radius: 10px;
+        box-shadow: 0 10px 0 $Very-dark-mostly-black-blue;
+        position: relative;
+        overflow: hidden;
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $Very-dark-mostly-black-blue;
+        }
+        &::after {
+          right: -7.5px;
+        }
+        &::before {
+          left: -7.5px;
+        }
+        .overlay {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.2);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+      p {
+        letter-spacing: 5px;
+        color: $Grayish-blue;
+      }
+    }
+  }
+  .footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .socials {
+      transform: translateY(80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      i {
+        cursor: pointer;
+        color: $Grayish-blue;
+        font-size: 30px;
+        &:hover {
+          color: $Soft-red;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 375px;
+    .timer {
+      .time-container {
+        .num {
+          width: 70px;
+          height: 70px;
+          font-size: 30px;
+        }
+        p {
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .footer {
+      .socials {
+        transform: translateY(50px);
+      }
+      .image {
+        left: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  background-color: #231c2b;
+}
+
+.container {
+  position: relative;
+  width: 1440px;
+  height: 100vh;
+  padding: 0 10px 0 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 100px;
+  overflow: hidden;
+}
+
+.container h1 {
+  letter-spacing: 5px;
+  color: white;
+  padding-top: 200px;
+}
+
+.container .timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.container .timer .time-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.container .timer .time-container .num {
+  background-color: #343650;
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 75px;
+  color: #fb6087;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 0 #191a24;
+          box-shadow: 0 10px 0 #191a24;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .timer .time-container .num::after, .container .timer .time-container .num::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #191a24;
+}
+
+.container .timer .time-container .num::after {
+  right: -7.5px;
+}
+
+.container .timer .time-container .num::before {
+  left: -7.5px;
+}
+
+.container .timer .time-container .num .overlay {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.container .timer .time-container p {
+  letter-spacing: 5px;
+  color: #8486a9;
+}
+
+.container .footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .footer .image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.container .footer .socials {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.container .footer .socials i {
+  cursor: pointer;
+  color: #8486a9;
+  font-size: 30px;
+}
+
+.container .footer .socials i:hover {
+  color: #fb6087;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 375px;
+  }
+  .container .timer .time-container .num {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+  .container .timer .time-container p {
+    letter-spacing: 2px;
+  }
+  .container .footer .socials {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  .container .footer .image {
+    left: unset;
+  }
+}
+/*# sourceMappingURL=style.css.map */
